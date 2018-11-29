@@ -1,11 +1,10 @@
 pragma solidity ^0.4.24;
 
-import "openzeppelin-eth/contracts/ownership/Ownable.sol";
+import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
 
-contract MyContract is Initializable, Ownable {
+contract MyContract is Ownable {
 
-    function initialize(address _owner) initializer public {
-        Ownable.initialize(_owner);
+    constructor(address _owner) public {
     }
 
 }
